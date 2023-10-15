@@ -1,8 +1,6 @@
 # import git
 from flask import Flask, render_template, request
 
-
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '79f11d1e73573998f815b165868cd307'
 
