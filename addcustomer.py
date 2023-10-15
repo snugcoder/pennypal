@@ -3,6 +3,8 @@ import json
 
 url = "https://api.finicity.com/aggregation/v2/customers/testing"
 
+
+
 payload = json.dumps({
   "username": "customer_1697336761",
   "firstName": "John",

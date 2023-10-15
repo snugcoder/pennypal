@@ -52,9 +52,6 @@ class ApiClient(object):
         self.token = auth_response.token
 
 
-
-
-
 # 4. 
 api_client = ApiClient()
 connect_parameters = ConnectParameters(partner_id=self.partner_id, customer_id=self.customer_id)
