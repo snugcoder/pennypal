@@ -1,3 +1,4 @@
+#3
 class ApiClient(object):
     # Credentials
     partner_id = "2445584332864"
@@ -49,3 +50,14 @@ class ApiClient(object):
         }
         auth_response = AuthenticationApi(self.api_client).create_token(partner_credentials=request_body)
         self.token = auth_response.token
+
+
+
+
+
+# 4. 
+api_client = ApiClient()
+connect_parameters = ConnectParameters(partner_id=self.partner_id, customer_id=self.customer_id)
+
+# Generate a Connect URL
+response = ConnectApi(api_client.api_client).generate_connect_url(connect_parameters=connect_parameters)
