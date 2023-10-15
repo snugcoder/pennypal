@@ -1,0 +1,20 @@
+
+# sample table for a user's expenses
+CREATE TABLE users {
+    username TINYTEXT NOT NULL,
+    password TINYTEXT NOT NULL,
+    account TINYTEXT NOT NULL,
+    supportedProd TEXT NOT NULL,
+    FOREIGN KEY user (insert user id from user table),
+    PRIMARY KEY (username, account, supported) 
+    #primary key subject to change
+}
+
+
+CREATE TABLE (user)expenses { # replace user with the user's id
+    id INT UNSIGNED NOT NULL auto_increment,
+    expenseType ENUM('UtilandRent', 'WagesAndHR', 'Ads', 'Bank', 'Supplies', 'Food', 'Subs', 'Legal', 'Manu', 'Donations', 'Travel', 'Insur', 'Other') NOT NULL,
+    desc TINYTEXT,
+    amount DECIMAL(16, 2) UNSIGNED NOT NULL,
+    PRIMARY KEY (id)
+}
