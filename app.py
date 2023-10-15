@@ -1,11 +1,9 @@
 # import git
-from flask import Flask, render_template, url_for, flash, redirect, request
-from flask_behind_proxy import FlaskBehindProxy
+from flask import Flask, render_template, request
+
 
 
 app = Flask(__name__)
-proxied = FlaskBehindProxy(app)
-load_dotenv()
 app.config['SECRET_KEY'] = '79f11d1e73573998f815b165868cd307'
 
 @app.route("/")
