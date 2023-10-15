@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from flaskext.mysql import MySQL
 from werkzeug.security import check_password_hash  # For password hashing
 
