@@ -1,6 +1,5 @@
-from flask import Flask, render_template
-from flask import request
-# import git
+import git
+from flask import Flask, render_template, url_for, flash, redirect, request
 
 
 app = Flask(__name__)
@@ -17,16 +16,16 @@ def login():
 def dashboard():
     return render_template('dashboard.html', subtitle = "Dashboard Page")
 
-# @app.route("/update_server/", methods=['POST'])
-# def webhook():
-#     if request.method == "POST":
-#         repo = git.Repo('')
-#         origin = repo.remotes.origin
-#         origin.pull()
-#         return 'Updated PythonAnywhere Successfully', 200
-#     else: 
-#         return 'Wrong event type', 400
-# ^command for python anywhere webhooks
+@app.route("/update_server/", methods=['POST'])
+def webhook():
+    if request.method == "POST":
+        repo = git.Repo('/home/pennypal/pennypal')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'Updated PythonAnywhere Successfully', 200
+    else: 
+        return 'Wrong event type', 400
+
 
 
 
