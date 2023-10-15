@@ -5,44 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: sans-serif;
-            font-color: white;
+            color: white;
         }
-        body{
+        body {
             min-height: 100vh;
-            background: rgb(165,99,221);
-            background: linear-gradient(90deg, rgba(165,99,221,1) 0%, rgba(52,78,180,1)100%);
+            background: rgb(165, 99, 221);
+            background: linear-gradient(90deg, rgba(165, 99, 221, 1) 0%, rgba(52, 78, 180, 1) 100%);
             display: flex;
-        }
-        h1{
-            font-weight: 3em;
-        }
-        .topnav {
-        overflow: hidden;
-        }
-        .topnav a {
-        float: left;
-        color: purple;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
         }
 
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: transparent;
+            color: white;
+        }
+
+        .topnav a {
+            float: left;
+            color: purple;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .slogan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; /* Reduce the height to make room for the image */
+        }
+
+        .name {
+            text-align: left;
+            padding-left: 20px;
+        }
     </style>
 </head>
-<body id = "home">
+<body id="home">
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="https://github.com/snugcoder/pennypal">Github</a>
-        <a href="/login/">Login</a>
-      </div>
-    <h1>PennyPal</h1>
-    <p>Putting more bang in your buck</p>
+        <a class="active" href="#home"><b>Home</b></a>
+        <a href="https://github.com/snugcoder/pennypal"><b>Github</b></a>
+        <a href="/login/"><b>Login</b></a>
+    </div>
 
+    <div class="slogan">
+        <div class="name">
+            <h1>PennyPal</h1>
+            <p>Putting more bang in your buck</p>
+        </div>
+    </div>
+    <img src="./static/Untitled_design-3.png" alt="Two women creating a budget">
 </body>
 </html>

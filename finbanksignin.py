@@ -1,6 +1,7 @@
 import requests
-# change below later to something, idk how yet
-url = "Follow Step 4 here => https://mstr.cd/3Z1ekdU"
+from generateconnecturl import generate_user_link
+# for now (ig) user link will have no input parameters
+url = ""
 
 payload = {}
 headers = {}

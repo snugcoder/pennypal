@@ -1,12 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body id = "dashboard">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Monthly Budget</title>
+        <link rel="stylesheet" type="text/css" href="budget.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>PennyPal</h1>
+            <p><b>Homepage</b></p>
+            <style>
+                body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.budget-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px #888;
+    border-radius: 5px;
+}
+
+.category {
+    margin: 10px 0;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#calculate-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.percentage-container {
+    display: flex;
+    align-items: center;
+}
+
+.percentage-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.percentage-circle span {
+    color: #007BFF;
+}
+
+header {
+    background: rgb(165,99,221);
+    background: linear-gradient(90deg, rgba(165,99,221,1) 0%, rgba(52,78,180,1)100%); /* Background color of the header */
+    color: #fff; /* Text color */
+    padding: 20px; 
+    text-align: center;
+    font-size: 25px;
+
+}
+
+            </style>
+        </header>
+        <h1>Monthly Budget</h1>
+        <div class="budget-container">
+            <div class="category">
     
+                Budget Monitor
+            </div>
+            <div class="percentage-container">
+                <div class="percentage-circle">
+                    <span id="percentage-used">0%</span>
+                </div>
+            </div>
     
+            <div class="category">
+                <label for="food">Food:</label>
+                <input type="text" id="food" class="expense" placeholder="Enter amount">
+            </div>
+            <div class="category">
+                <label for="utilities">Utilities:</label>
+                <input type="text" id="utilities" class="expense" placeholder="Enter amount">
+            </div>
+            <div class="category">
+                <label for="wages">Wages:</label>
+                <input type="text" id="wages" class="income" placeholder="Enter amount">
+            </div>
+            <div class="category">
+                <label for="advertising">Advertising:</label>
+                <input type="text" id="advertising" class="expense" placeholder="Enter amount">
+            </div>
+            <div class="category">
+                <label for="supplies">Supplies:</label>
+                <input type="text" id="supplies" class="expense" placeholder="Enter amount">
+            </div>
+            <div class="category">
+                <label for="other">Insurance:</label>
+                <input type="text" id="other" class="expense" placeholder="Enter amount">
+            </div>
+            <div class="category">
+                <label for="other">Other:</label>
+                <input type="text" id="other" class="expense" placeholder="Enter amount">
+            </div>
+        </div>
+        <button id="calculate-button">Calculate</button>
+        <p id="result"></p>
+        <script src="budget.js"></script>
 </body>
+    
 </html>
