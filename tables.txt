@@ -5,13 +5,12 @@ CREATE TABLE users {
     password TINYTEXT NOT NULL,
     account TINYTEXT NOT NULL,
     supportedProd TEXT NOT NULL,
-    FOREIGN KEY user (insert user id from user table),
-    PRIMARY KEY (username, account, supported) 
+    PRIMARY KEY (username, account, supportedProd) 
     #primary key subject to change
 }
 
 
-CREATE TABLE (user)expenses { # replace user with the user's id
+CREATE TABLE (user)expenses { # replace user with the user's id or other unique identifier
     id INT UNSIGNED NOT NULL auto_increment,
     expenseType ENUM('UtilandRent', 'WagesAndHR', 'Ads', 'Bank', 'Supplies', 'Food', 'Subs', 'Legal', 'Manu', 'Donations', 'Travel', 'Insur', 'Other') NOT NULL,
     desc TINYTEXT,

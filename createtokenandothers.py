@@ -75,7 +75,7 @@ print(create_token.__builtins__)
 def generate_user_link():
   url = "https://api.finicity.com/connect/v2/generate"
   #step 1 of the user guide
-  token = create_token()._content
+  token = create_token().__str__
   payload = json.dumps({
     "partnerId": "2445584332864",
     "customerId": "7006569567",
